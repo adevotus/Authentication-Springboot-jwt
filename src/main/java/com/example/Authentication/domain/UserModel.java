@@ -16,11 +16,13 @@ import java.util.Collection;
 @NoArgsConstructor
 @Data
 public class UserModel {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+
     private Long id;
+
     private String name;
+
     private String username;
+
     private String password;
 
     @ManyToMany(fetch = FetchType.EAGER) //EAGER means to load the roles as the users.
